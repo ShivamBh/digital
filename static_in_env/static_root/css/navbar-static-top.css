@@ -4,7 +4,7 @@ body {
 
 .navbar-static-top {
   margin-bottom: 19px;
-  background-color: #0E3D14;
+  background-color: #E64042;
   border-color: #1A5F23;
 }
 
@@ -29,5 +29,5 @@ body {
 }
 
 .navbar-toggle {
-	background-color: #0E3D14 !important;
+	background-color: #E64042 !important;
 }
