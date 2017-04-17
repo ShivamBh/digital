@@ -5,7 +5,7 @@ body {
 
 .navbar-static-top {
   margin-bottom: 19px;
-  background-color: #5ACDFF;
+  background-color: #FF5A75;
   border-color: #00B2FF;
 }
 
@@ -27,9 +27,9 @@ body {
 }
 
 .navbar-toggle:hover {
-	background-color: #00B2FF !important;
+	background-color: #FF5A75 !important;
 }
 
 .navbar-toggle {
-	background-color: #5ACDFF !important;
+	background-color: #FF5A75 !important;
 }
