@@ -1,6 +1,7 @@
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 from django.shortcuts import render, get_object_or_404
+from django.utils import timezone
 from .models import Product
 
 # Create your views here.
@@ -13,8 +14,8 @@ class ProductListView(ListView):
 	model = Product
 
 	def get_context_data(self, *args, **kwargs):
-		context = super(ProductListView, self).get_context_data()
-		print(context)
+		context = super(ProductListView, self).get_context_data(*args, **kwargs)
+		context["now"] = timezone.now()
 		return context
 
 
