@@ -10,6 +10,17 @@
 		<h2>
 			{{ object.title }}
 		</h2>
+
+		{% if object.productimage_set.count > 0 %}
+		<div class="image_product">
+			{% for img in object.productimage_set.all %}
+			
+
+				<img class="img-responsive" src="{{ img.image.url }}" alt="{{ object.title }}">
+			{% endfor %}
+		</div>
+		{% endif %}
+
 		<h4>{{ object.description }}</h4>
 	</div>
 
