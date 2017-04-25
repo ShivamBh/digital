@@ -1,15 +1,39 @@
 {% extends "base.html" %}
 
+
+
+
 {% block content %}
+<div class="row">
+	<div class="col-sm-8">
 
-{{object.title}}
+		<h2>
+			{{ object.title }}
+		</h2>
+		<h4>{{ object.description }}</h4>
+	</div>
 
-<select class="form-control">
-	{% for vari_obj in object.variation_set.all %}
+	<div class="col-sm-4">
+		{% if object.variation_set.count > 1 %}
+			<select class="form-control">
+				{% for vari_obj in object.variation_set.all %}
 		
-		<option>{{vari_obj.title}}</option>
-	{% endfor %}
-</select>
+				<option>{{vari_obj.title}}</option>
+				{% endfor %}
+			</select>
+
+
+		{% endif %}
+
+		<br>
+
+		<a href="#">Add to Cart</a>
+		<hr>
+		<h4>Related Products</h4>
+	</div>
+
+</div>
+
 
 
 {% endblock %}
