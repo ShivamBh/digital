@@ -36,11 +36,14 @@ class VariationListView(StaffRequiredmixin, ListView):
 			for form in formset:
 				new_item = form.save(commit=False)
 				#print("New item: ",new_item)
+				#if new_item.title:
+
 				product_pk = self.kwargs.get("pk")
 				product = get_object_or_404(Product, pk=product_pk)
 				
 				new_item.product = product
 				new_item.save()
+
 			messages.success(request, "Your inventory has been updated.")
 			return redirect("products")
 		print (request.POST)
